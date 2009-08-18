@@ -1,0 +1,5 @@
+Gitmit is a set of rake tasks built to make it easier to use git with Radiant.
+
+To use Gitmit, type rake radiant:gitmit in the main directory of your project. This will check to see if you have the directories db/db_current_ver and db/db_archive, and make them if you don't. It will then move any file named current_ver.sql into db_archive and rename it with the timestamp. Next, gitmit will dump the database that your project is currently set up to use in the environment file into db_current_ver. Finally, it checks if you already have a git repository, makes one if you don't, and adds and commits the entire project.
+
+Gitmit will only work on Mac/Linux.
